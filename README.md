@@ -9,7 +9,7 @@ This repository is intended to manage metrics for the Throughput Project.  Metri
 
 This project is an open project, and contributiosn are welcome from anyone.  All contributors to this project are bound by a [code of conduct](CODE_OF_CONDUCT.md).  Please review and follow this code of conduct as part of your contribution.
 
-  * [Simon Goring](http://goring.org) [![orcid](https://img.shields.io/badge/orcid-XXXX--XXXX--XXXX--XXXX-brightgreen.svg)](https://orcid.org/XXXX-XXXX-XXXX-XXXX)
+  * [Simon Goring](http://goring.org) [![orcid](https://img.shields.io/badge/orcid-0000--0002--2700--4605-brightgreen.svg)](https://orcid.org/0000-0002-2700-4605)
 
 All products of the Throughput Annotation Project are licensed under and [MIT License](LICENSE.md) unless otherwise noted.
 
