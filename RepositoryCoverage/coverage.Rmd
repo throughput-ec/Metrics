@@ -1,0 +1,34 @@
+---
+title: Keyword Intersections in Throughput
+---
+
+## The Data Model
+
+Throughput relates data repositories to code by crawling the GitHub collaborative coding platform.
+
+Using data resources from re3data we then search for keywords and URLs in GitHub repositories that reference each repository.  For example:
+
+| Repository | Search Term | Sample repository |
+| ------ | ----- | ------ |
+| Neotoma Paleoecology Database | `Neotoma Paleoecology Database`  | [neotomadb/neotoma_doi](http://github.com/neotomadb/neotoma_doi)  |
+|    |   |   |
+
+Within Throughput the relationship is modeled as a relationship between an object of type `DataResource` and an object of type `CodeRepository`.  In the neo4j database this whol relationship is defined using the Cypher framework:
+
+```
+(:TYPE {type: "schema:CodeRepository"})-[:is_type]-(:OBJECT)-[:body]-(:ANNOTATION)-[:target]-(:OBJECT)-[:is_type]-(:TYPE {type: "DataResource"})
+```
+
+## Repositories
+
+### re3data Repositories
+
+re3data is crawled, extracting XML files for each repository.  As of `r Sys.Date()` there are `r re3nodes` nodes in the database.
+
+#### Keywords
+
+Resource managers may identify keywords in the re3data metadata.  There are `r length(keywords)` distinct keywords across the repositories, with `r avgkeyword` keywords per repository.  With this structure we can identify several key elements.  First: Keyword clusters, second: keyword identifiability.
+
+##### Keyword Clusters
+
+We want to identify keywords in several ways.
