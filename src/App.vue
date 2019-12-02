@@ -1,7 +1,8 @@
+
 <template>
   <div id="app"  class="mainpage">
-    <img alt="Throughput logo" src="./assets/throughput.svg">
-    <parentPage/>
+    <Header />
+    <parentPage />
   </div>
 </template>
 
@@ -9,13 +10,17 @@
 
 import './assets/text.css';
 import './assets/containers.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 import parentPage from './components/parentPage.vue'
+import header from './components/header.vue'
 
 export default {
   name: 'app',
   components: {
     'parentPage': parentPage,
+    'Header': header,
   }
 }
 </script>
